@@ -150,6 +150,7 @@ body {
     }
     .button-container {
       font-size: 1.5rem;
+      top: 55vh;
     }
     .footer {
       font-size: 0.75rem;
