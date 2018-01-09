@@ -1,0 +1,145 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  /* background: rgba(170, 170, 170, 0.301); */
+  font-family: "Roboto";
+  background: linear-gradient(45deg, rgba(255,255,255,0.31) 0%, rgba(68,68,85,1) 100%);
+}
+
+/* nav-portion */
+  nav {
+    background-color: #445;
+    font-size: 0.75rem;
+  }
+
+  nav ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  nav li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  nav a {
+    background: rgba(170, 170, 170, 0.397);
+    border: solid 1px black;
+    padding: 7.5px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.25rem;
+  }
+
+  nav a:hover {
+    background: #C58F47;
+  }
+
+  .nav {
+    animation: nav;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes nav {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  .left-link {
+    margin-right: 8.25%;
+  }
+
+  .right-link {
+    margin-left: 8.25%;
+  }
+/* End Nav Portion */
+
+/* Info Portion */
+  .info-container {
+    animation: info-container;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 82.5%;
+  }
+
+  @keyframes info-container {
+    0% {top: -150px;}
+    100% {top: 6vh;}
+  }
+
+  .info-container ul {
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  .footer {
+    width: 66%;
+    margin: 15% auto 0;
+  }
+/* End Info Portion */
+
+
+/* Media Queries Start */
+  @media (min-width:500px) {
+    /* Nav Portion */
+      nav {
+        font-size: 1.25rem;
+      }
+      nav ul {
+        padding: 20px 0;
+      }
+      nav a {
+        padding: 12px 20px;
+        border-radius: 12px;
+      }
+      .left-link {
+        margin-right: 8.25%;
+      }
+      .right-link {
+        margin-left: 8.25%;
+      }
+    /* End Nav Portion */
+
+    /* Info Portion */
+      .info-container {
+        font-size: 1.75rem;
+      }
+      .info-container li {
+        margin: 25px 0;
+      }
+    /* End Info Portion */
+  }
+
+  @media (min-width:900px) {
+    .info-container {
+      font-size: 1.5rem;
+      width: 49.5%;
+    }
+    @keyframes info-container {
+      0% {top: -200px}
+      100% {top: 0vh}
+    }
+    .info-container ul {
+      width: 49.5%;
+    }
+  }
+
+  @media (min-width:1800px) {
+    .info-container {
+      font-size: 2rem;
+    }
+    .info-container ul {
+      width: 33%;
+    }
+  }

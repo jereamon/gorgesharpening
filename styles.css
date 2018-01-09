@@ -1,0 +1,157 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-image: url("nick-grappone-portrait.jpg");
+}
+
+.hero-container {
+  animation-name: hero-container;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  color: white;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(36, 36, 36), 4px 0px 7px rgba(75, 75, 75, 0.5), 0px 0px 30px rgba(75, 75, 75, 0.75);
+  top: 15vh;
+  width: 80%;
+}
+
+@keyframes hero-container {
+  0% {top: -150px; opacity: -2}
+  100% {top: 15vh; opacity: 1}
+}
+
+
+/* Button Classes */
+  a {
+    background: rgba(170, 170, 170, 0.397);
+    border: solid 1px black;
+    padding: 7.5px 15px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.25rem;
+  }
+
+  a:hover {
+    background: #C58F47;
+  }
+
+  .button-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 300px;
+    animation: button-container;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    }
+
+  @keyframes button-container {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .btn-left {
+    margin-right: 25px;
+  }
+
+  .btn-right {
+    margin-left: 25px;
+  }
+/* Button Classes End */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  font-size: .75rem;
+}
+
+/* Media Queries Start */
+  @media (min-width: 500px) {
+    .hero-container {
+      font-size: 1.75rem;
+    }
+    .button-container {
+      top: 50vh;
+      font-size: 1.5rem;
+    }
+    .footer {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    body {
+      background-image: url("nick-grappone-knife-chanterelles.jpg");
+    }
+    .hero-container {
+      width: 66%;
+      font-size: 2.25rem;
+    }
+    .button-container {
+      font-size: 2rem;
+    }
+    .footer {
+      font-size: 1rem;
+    }
+  }
+
+  @media (orientation: landscape) and (max-width: 900px) {
+    body {
+      background-image: url("nick-grappone-knife-chanterelles.jpg");
+    }
+    .hero-container {
+      font-size: 1rem;
+      width: 66%;
+    }
+    @keyframes hero-container {
+      0% {top: -150px;}
+      100% {top: 5vh;}
+    }
+    .button-container {
+      top: 22vh;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (orientation: landscape) and (min-width: 900px) {
+    .hero-container {
+      font-size: 1.5rem;
+      width: 66%;
+    }
+    @keyframes hero-container {
+      0% {top: -150px;}
+      100% {top: 5vh;}
+    }
+    .button-container {
+      top: 40vh;
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero-container {
+      width: 66%;
+      font-size: 2rem;
+    }
+    .button-container {
+      font-size: 1.5rem;
+    }
+    .footer {
+      font-size: 0.75rem;
+    }
+  }
